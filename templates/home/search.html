@@ -1,0 +1,33 @@
+{% extends 'home/basic.html' %}
+
+{% block title %} Search {% endblock %}
+{% block blogactive %} active {% endblock blogactive%}
+{% block body %}
+<div class="container">
+    <h2>Search results:</h2>
+    {% if allposts|length < 1 %}
+    
+    Your search  {{query}} is not found
+    too much query search something valid 
+    {% endif %}
+    {% for post in allposts %}
+
+    
+    <div class="col-md-6">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-success">Design</strong>
+            <h3 class="mb-0">{{Post.title}}</h3>
+            <div class="mb-1 text-muted">{{post.timestamp}}</div>
+            <p class="mb-auto">{{post.content| truncatechars:100}}</p>
+            <a href="/blog/{{post.slug}}" class="stretched-link">Continue reading</a>
+          </div>
+        </div>
+      </div>
+
+    {% endfor %}
+
+
+    </div>
+
+{% endblock %}

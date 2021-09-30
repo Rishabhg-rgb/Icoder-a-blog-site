@@ -1,0 +1,41 @@
+{% extends 'home/basic.html' %}
+
+{% block title %} Contact {% endblock %}
+{% block contactactive %} active {% endblock contactactive%}
+{% block body %} 
+<div class="container">
+<h2>Contact icoders</h2><br>
+    <form action='/contact/' method='POST' > {% csrf_token %}
+    <div class="mb-1">
+        <label for="name" class="form-label">Full name</label>
+        <input type="text" class="form-control" name="username">
+    </div>
+       
+    <div class="mb-1">
+      <label for="exampleInputEmail1" class="form-label">Email address</label>
+      <input type="email" class="form-control"  name="email">
+      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    </div>
+
+    <div class="mb-1">
+      <label for="exampleInputPassword1" class="form-label">Password</label>
+      <input type="password" class="form-control" name="password">
+    </div>
+ 
+    <div class="mb-1">
+      <label for="exampleInputPassword1" class="form-label">phone number</label>
+      <input type="tel" class="form-control" name="phone">
+    </div>
+ 
+    <div class="mb-1">
+        <label for="exampleInputPassword1" class="form-label"> views</label>
+        <input type="text" class="form-control" name="views">
+      </div>
+   
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+{% endblock %}
+
+

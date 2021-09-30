@@ -1,0 +1,50 @@
+{% extends 'home/basic.html' %}
+{% block title %} Home {% endblock %}
+{% block homeactive %} active {% endblock homeactive%}
+{% block css %}
+
+
+<style>
+.jumbotron{
+    background-color: black;
+    color:white;
+    opacity: 0.7;
+}
+</style>
+
+ 
+
+{% endblock %}
+{% block body %}
+
+<div class="container">
+    
+    <div class="jumbotron my-5">
+      <h1 class="display-4">Welcome to icoder!</h1>
+      <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+      <hr class="my-4">
+      <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+      <p class="lead">
+        <a class="btn btn-primary btn-lg" href="blog/" role="button">Go to blog</a>
+      </p>
+    </div>
+</div>
+
+    <div class="container">
+    <h2>Popular blog post</h2>
+    <div class="col-md-6">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-success">Design</strong>
+            <h3 class="mb-0">Post title</h3>
+            <div class="mb-1 text-muted">Nov 11</div>
+            <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+            <a href="#" class="stretched-link">Continue reading</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+
+
+{% endblock %}
